@@ -21,7 +21,7 @@ reset_button = pygame.image.load(os.path.join(os.path.dirname(os.path.abspath(__
 font = pygame.font.Font(None, 24)
 
 def start():
-    pass
+    os.system('FlappyBird.py')
 
 
 def read_statistics():
@@ -30,10 +30,15 @@ def read_statistics():
     if not os.path.exists(stats_file_path):
         return default_statistics
     try:
-        with open(stats_file_path, 'r') as file:
-            lines = ''.join(file.readlines()).split('\n')
-            for i in range(len(lines)):
-                default_statistics[i] = default_statistics[i] + ' ' + str(lines[i])
+        with open(stats_file_path, 'r+') as file:
+            numbers = file.read().split()
+            numbers[0] = str(int(numbers[2]) // int(numbers[3]))
+            default_statistics[0] = default_statistics[0] + ' ' + str(int(numbers[2]) // int(numbers[3]))
+            for i in range(1, len(numbers)):
+                default_statistics[i] = default_statistics[i] + ' ' + str(numbers[i])
+            file.seek(0)
+            file.write('\n'.join(map(str, numbers)))
+            file.truncate()
             return default_statistics
     except:
         return default_statistics
@@ -52,6 +57,7 @@ running = True
 while running:
     screen.blit(bg_image, (0, 0))
     text_color = black
+    stats = read_statistics()
 
     for i, stat in enumerate(stats):
         text_surface = font.render(stat, True, text_color)

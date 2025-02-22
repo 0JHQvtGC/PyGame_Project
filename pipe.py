@@ -3,10 +3,13 @@ from pygame.locals import *
 
 
 class Pipe(pygame.sprite.Sprite):
-    def __init__(self, x, y, position, game_state):
+    def __init__(self, x, y, position, game_state, random_event):
         pygame.sprite.Sprite.__init__(self)
         self.game_state = game_state
-        self.image = pygame.image.load('img/pipe.png')
+        if random_event:
+            self.image = pygame.image.load('img/bird2.png')
+        else:
+            self.image = pygame.image.load('img/pipe.png')
         self.rect = self.image.get_rect()
         if position == 1:
             self.image = pygame.transform.flip(self.image, False, True)
