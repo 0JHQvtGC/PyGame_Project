@@ -14,7 +14,7 @@ class Bird(pygame.sprite.Sprite):
                 img = pygame.image.load(f'img/bird{num}.png')
                 self.images.append(img)
         else:
-            img = pygame.image.load(f'img/pipe_bird.png')
+            img = pygame.image.load('img/pipe_bird.png')
             self.images.append(img)
         self.image = self.images[self.index]
         self.rect = self.image.get_rect()

@@ -13,10 +13,10 @@ pygame.display.set_caption("Flappy Bird")
 white = (255, 255, 255)
 black = (0, 0, 0)
 
-bg_image = pygame.image.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'img', 'bg.png'))
-start_button = pygame.image.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'img', 'start.png'))
-exit_button = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'img', 'exit.png')), start_button.get_size())
-reset_button = pygame.image.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'img', 'reset.png'))
+bg_image = pygame.image.load('img/bg.png')
+start_button = pygame.image.load('img/start.png')
+exit_button = pygame.image.load('img/exit.png')
+reset_button = pygame.image.load('img/reset.png')
 
 font = pygame.font.Font(None, 24)
 

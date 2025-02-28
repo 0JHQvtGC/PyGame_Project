@@ -24,7 +24,7 @@ bg = pygame.image.load('img/bg.png')
 ground_img = pygame.image.load('img/ground.png')
 button_img = pygame.image.load('img/restart.png')
 button_img_exit = pygame.image.load('img/exit.png')
-stats_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'statistics.txt')
+stats_file_path = 'statistics.txt'
 
 font = pygame.font.SysFont('Bauhaus 93', 60)
 
