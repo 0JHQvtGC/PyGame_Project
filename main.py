@@ -25,7 +25,7 @@ def start():
 
 
 def read_statistics():
-    stats_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'statistics.txt')
+    stats_file_path = 'statistics.txt'
     default_statistics = ["Средняя дистанция: -", "Максимальная дистанция: -", "Суммарная дистанция: -", "Количество игр: -"]
     if not os.path.exists(stats_file_path):
         return default_statistics
