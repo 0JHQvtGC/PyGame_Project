@@ -23,7 +23,7 @@ font = pygame.font.Font(None, 24)
 def start():
     import FlappyBird
     FlappyBird.run_game()
-    #os.system('FlappyBird.py')
+    #os.system("FlappyBird.py")
 
 
 def read_statistics():
