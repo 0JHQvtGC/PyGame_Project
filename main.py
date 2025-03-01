@@ -1,4 +1,4 @@
-import os
+#import os
 import pygame
 from tkinter import messagebox
 
@@ -29,8 +29,8 @@ def start():
 def read_statistics():
     stats_file_path = 'statistics.txt'
     default_statistics = ["Средняя дистанция: -", "Максимальная дистанция: -", "Суммарная дистанция: -", "Количество игр: -"]
-    if not os.path.exists(stats_file_path):
-        return default_statistics
+    # if not os.path.exists(stats_file_path):
+    #     return default_statistics
     try:
         with open(stats_file_path, 'r+') as file:
             numbers = file.read().split()
