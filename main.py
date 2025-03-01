@@ -21,7 +21,9 @@ reset_button = pygame.image.load('img/reset.png')
 font = pygame.font.Font(None, 24)
 
 def start():
-    os.system('FlappyBird.py')
+    import FlappyBird
+    FlappyBird.run_game()
+    #os.system('FlappyBird.py')
 
 
 def read_statistics():
